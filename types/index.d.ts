@@ -19,22 +19,9 @@ declare type LoginUser = {
   password: string;
 };
 
-declare type User = {
+/* declare type User = {
   $id: string;
-};
-
-declare type HeaderBoxProp = {
-  type?: "title" | "greeting";
-  title: string;
-  subtext: string;
-  user?: string;
-};
-
-declare type TotalBalanceBoxProp = {
-  account: Array;
-  totalBanks: number;
-  totalCurrentBalance: number;
-};
+}; */
 
 declare type User = {
   $id: string;
@@ -51,6 +38,19 @@ declare type User = {
   postalCode: string;
   dateOfBirth: string;
   ssn: string;
+};
+
+declare type HeaderBoxProp = {
+  type?: "title" | "greeting";
+  title: string;
+  subtext: string;
+  user?: string;
+};
+
+declare type TotalBalanceBoxProp = {
+  account: Array;
+  totalBanks: number;
+  totalCurrentBalance: number;
 };
 
 declare type NewUserParams = {
@@ -152,6 +152,7 @@ declare interface CreditCardProps {
   account: Account;
   userName: string;
   showBalance?: boolean;
+  bgColor?: boolean;
 }
 
 declare interface BankInfoProps {
