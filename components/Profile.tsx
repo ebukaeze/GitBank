@@ -22,15 +22,15 @@ const Profile = ({ user, transactions, banks }: RightSidebarProps) => {
           <div className="w-[62px] h-[62px] bg-white flex rounded-full shadow-slate-300 shadow-sm items-center justify-center">
             <div className="w-[60px] h-[60px] bg-gray-200 flex items-center justify-center rounded-full">
               <span className="text-xl font-semibold text-blue-600">
-                {user.firstName[0]}
+                {user?.name[0]}
               </span>
             </div>
           </div>
           <div className="flex flex-col items-start w-full justify-center">
             <h1 className="text-sm font-medium text-neutral-700">
-              {user.firstName} {user.lastName}
+              {user?.name}
             </h1>
-            <p className="text-sm text-gray-600">{user.email}</p>
+            <p className="text-sm text-gray-600">{user?.email}</p>
           </div>
 
           <ChevronDown size={48} color="blue" />
